@@ -99,10 +99,6 @@ void Outputs::updateOutputInternal(unsigned char outputId, unsigned char outputV
       }
     }
   } else {
-    // if the output is the button board output, then invert the value
-    if (outputId < 31) {
-      outputValue = 255 - outputValue;
-    }
     if (outputValue == 255) {
       updateOutputActual(outputId - 15, 4096, 0);
     } else if (outputValue == 0) {
